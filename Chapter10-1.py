@@ -28,6 +28,12 @@ def plus():
     size = tess.pensize()
     if size <= 20 and size >0:
         tess.pensize(size +1)
+
+def minus():
+    size = tess.pensize()
+    if size <= 20 and size >0:
+        tess.pensize(size -1)
+
 # These lines "wire up" keypresses to the handlers we've defined.
 wn.onkey(h1, "Up")
 wn.onkey(h2, "Left")
@@ -37,6 +43,8 @@ wn.onkey(red, "r")
 wn.onkey(blue, "b")
 wn.onkey(green, "g")
 wn.onkey(plus, "+")
+wn.onkey(minus, "-")
+
 # Now we need to tell the window to start listening for events,
 # If any of the keys that we're monitoring is pressed, its
 # handler will be called.
